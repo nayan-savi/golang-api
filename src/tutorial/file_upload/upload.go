@@ -18,7 +18,6 @@ func uploadFile(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("File Upload Endpoint Hit")
 	//fmt.Fprintf(w, "<!DOCTYPE html> <html lang=\"en\"> <head> <meta charset=\"UTF-8\" />     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />     <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\" />     <title>Document</title>   </head>   <body>     <form       enctype=\"multipart/form-data\"       action=\"http://localhost:8080/upload\"       method=\"post\"     >       <input type=\"file\" name=\"myFile\" />       <input type=\"submit\" value=\"upload\" />     </form>   </body> </html>")
 	da, _ := readFile()
-	
 	fmt.Fprintf(w, da)
     // Parse our multipart form, 10 << 20 specifies a maximum
     // upload of 10 MB files.
